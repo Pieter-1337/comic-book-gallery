@@ -12,6 +12,7 @@ namespace ComicBookGallery.Data
         {
             new ComicBook()
             {
+                Id = 1,
                 SeriesTitle = "The Amazing Spider-Man",
                 IssueNumber = 700,
                 DescriptionHTML = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>",
@@ -23,11 +24,13 @@ namespace ComicBookGallery.Data
                     new Artist() { Name = "Edgar Delgado", Role = "Colos"},
                     new Artist() { Name = "Chris Eliopoulos", Role = "Letters"},
 
-                }
+                },
+                Favorite = false
             },
 
             new ComicBook()
             {
+                Id = 2,
                 SeriesTitle = "The Amazing Spider-Man",
                 IssueNumber = 657,
                 DescriptionHTML = "<p><strong>FF: THREE TIE-IN.</strong> Spider-Man visits the FF for a very private wake--just for family.</p>",
@@ -44,6 +47,7 @@ namespace ComicBookGallery.Data
 
             new ComicBook()
             {
+                Id = 3,
                 SeriesTitle = "Bone",
                 IssueNumber = 50,
                 DescriptionHTML = "<p><strong>The Dungeon & The Parapet, Part 1.</strong> Thorn is discovered by Lord Tarsil and the corrupted Stickeaters and thrown into a dungeon with Fone Bone. As she sleeps, a message comes to her about the mysterious \"Crown of Horns\".</p>",
