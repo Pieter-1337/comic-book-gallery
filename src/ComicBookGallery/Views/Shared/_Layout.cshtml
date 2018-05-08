@@ -27,6 +27,16 @@
         </div>
     </div>
 
+    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
+    {
+        <div class="backbar">
+            <div class="container">
+                @Html.ActionLink("Return to ComicList", "Index", null, new { @class = "btn btn-default" })
+                @*<a class="btn btn-default" href="/">Return to List</a>   <- Bovenstaande action link vervangt de HTML Link tag*@
+            </div>
+        </div>
+    }
+
     <div class="container body-content">
         @RenderBody()
         <hr />
