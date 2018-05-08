@@ -18,28 +18,32 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Comic Book Gallery", "Index", "ComicBooks", new { area = "" }, new { @class = "navbar-brand" })
+                
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Add menu items here -->
+                <ul class="nav navbar-right">
+                    @Html.ActionLink("Products", "Index", "ComicBooks", new { area = "" }, new { @class = "navbar-text"})
+                    @Html.ActionLink("About", "Index", "ComicBooks", new { area = ""}, new { @class = "navbar-text" })
+                    @Html.ActionLink("Contact", "Index", "ComicBooks", new { area = ""}, new { @class = "navbar-text" })
                 </ul>
             </div>
         </div>
     </div>
 
-    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
+    @*@if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
     {
         <div class="backbar">
             <div class="container">
                 @Html.ActionLink("Return to ComicList", "Index", null, new { @class = "btn btn-default" })
-                @*<a class="btn btn-default" href="/">Return to List</a>   <- Bovenstaande action link vervangt de HTML Link tag*@
+                @*<a class="btn btn-default" href="/">Return to List</a>   <- Bovenstaande action link vervangt de HTML Link tag
             </div>
         </div>
-    }
+    }*@
 
     <div class="container body-content">
         @RenderBody()
         <hr />
+
         <footer>
             <p>&copy; @DateTime.Now.Year - Comic Book Gallery</p>
         </footer>

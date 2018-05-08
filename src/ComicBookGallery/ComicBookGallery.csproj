@@ -93,7 +93,9 @@
     <Content Include="Content\site.css" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\batman-the-dark-knight-2.jpg" />
     <Content Include="Images\bone-50.jpg" />
+    <Content Include="Images\comicbookjunkie-banner.jpg" />
     <Content Include="Images\the-amazing-spider-man-657.jpg" />
     <Content Include="Images\the-amazing-spider-man-700.jpg" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -125,6 +127,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\ComicBooks\Index.cshtml" />
+    <Content Include="Views\ComicBooks\DisplayTemplates\IndexTop.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

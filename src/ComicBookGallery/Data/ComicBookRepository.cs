@@ -59,7 +59,25 @@ namespace ComicBookGallery.Data
                     new Artist() { Name = "Jeff Smith", Role = "Letters" }
                 },
                 Favorite = false
-            }
+            },
+
+             new ComicBook()
+            {
+                Id = 4,
+                SeriesTitle = "Batman The Dark Knight",
+                IssueNumber = 2,
+                DescriptionHTML = "<p>In this second New 52 volume, The Scarecrow has returned! The villainous genius has always preyed on the worst fears of his victims, but now he’s refined his fear toxin to greater effectiveness—and deadlier consequences.<strong>Batman must find out not only how to conquer this dangerous psychopath</strong></p>",
+                Artists = new Artist[]
+                {
+                    new Artist() { Name = "Greg Hurwitz", Role = "Script"},
+                    new Artist() { Name = "David Finch", Role = "Pencils"},
+                    new Artist() { Name = "Richard Friend", Role = "Inks"},
+                    new Artist() { Name = "Sonia Oback", Role = "Colors"},
+                    new Artist() { Name = "Dezi Sienty", Role = "Letters"},
+
+                },
+                Favorite = false
+            },
         };
 
         public ComicBook[] GetComicBooks()
