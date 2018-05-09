@@ -1,0 +1,28 @@
+﻿body {
+}
+
+.btn-succes {
+    background-color: green;
+    background-image: none;
+    border: 1px solid green;
+    color: white;
+}
+
+.btn-succes:hover{
+    color: lightgrey;
+}
+
+
+
+.btn-warning {
+    background-color: #b81e0d;
+    background-image: none;
+    border: 1px solid #b81e0d;
+}
+
+    .btn-warning:hover {
+        background-color: #b81e0d;
+        background-image: none;
+        border: 1px solid #b81e0d;
+        color: lightgrey;
+    }

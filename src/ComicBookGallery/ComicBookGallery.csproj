@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Contact.css" />
     <Content Include="Content\site.css" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -112,11 +113,13 @@
     <Compile Include="Controllers\ComicBooksController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Data\ComicBookRepository.cs" />
+    <Compile Include="Data\ContactMessageRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\ComicBook.cs" />
+    <Compile Include="Models\ContactMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +135,7 @@
     <Content Include="Views\ComicBooks\DisplayTemplates\IndexTop.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\ContactMessages.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

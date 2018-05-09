@@ -1,0 +1,42 @@
+﻿@model List<ComicBookGallery.Models.ContactMessage>
+
+@{
+    ViewBag.Title = "Contact Messages";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<table class="table">
+    <tr>
+        <th>Date</th>
+        <th>Afzender</th>
+        <th>Email</th>
+        <th>Soort</th>
+        <th>Telefoon</th>
+        <th>&nbsp;</th>
+    </tr>
+
+    
+        @foreach (var contactMessage in Model)
+        {
+            <tr>
+                <td>
+                    <span class="hidden-xs">@contactMessage.Date.ToString("MM/dd/yyyy")</span>
+                    <span class="hidden-sm hidden-md hidden-lg">@contactMessage.Date.ToString("MM/dd")</span>
+                </td>
+
+                <td>@contactMessage.Naam</td>
+
+                <td>@contactMessage.Email</td>
+
+                <td>@contactMessage.ContactPersoon.ToString()</td>
+
+                <td>@contactMessage.Telefoon</td>
+
+            </tr>
+
+        } 
+
+    </table>
+
