@@ -9,6 +9,11 @@
     padding-right: 15px;
 }
 
+/* Global styles*/
+.ComicBooks-comic-title-bar {
+    min-height: 40px;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -42,3 +47,5 @@ textarea {
 .series-list li:last-child{
   border: none;
 }
+
+

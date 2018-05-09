@@ -23,8 +23,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-right">
                     @Html.ActionLink("Products", "Index", "ComicBooks", new { area = "" }, new { @class = "navbar-text"})
-                    @Html.ActionLink("About", "Index", "ComicBooks", new { area = ""}, new { @class = "navbar-text" })
-                    @Html.ActionLink("Contact", "Index", "ComicBooks", new { area = ""}, new { @class = "navbar-text" })
+                    @Html.ActionLink("About", "Index", "About", new { area = ""}, new { @class = "navbar-text" })
+                    @Html.ActionLink("Contact", "Index", "Contact", new { area = ""}, new { @class = "navbar-text" })
                 </ul>
             </div>
         </div>
@@ -51,5 +51,6 @@
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/site.css"></script>
 </body>
 </html>
