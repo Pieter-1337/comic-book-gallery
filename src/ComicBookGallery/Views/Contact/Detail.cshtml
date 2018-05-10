@@ -1,0 +1,23 @@
+﻿@model ComicBookGallery.Models.ContactMessage
+@{
+    ViewBag.Title = "Detail " + @Model.ContactPersoon;
+}
+
+<h2>Detail @Model.Naam @Model.Date.ToString("d")</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="well">
+            <h5><label><strong>Verzender:</strong></label> @Model.Naam</h5>
+            <h5><label><strong>Datum:</strong></label> @Model.Date.ToString("d")</h5>
+            <h5><label><strong>Email:</strong></label> @Model.Email</h5>
+            <h5><label><strong>Telefoon:</strong></label> @Model.Telefoon</h5>
+            <h5><label><strong>Soort:</strong></label> @Model.ContactPersoon.ToString()</h5>
+            <h5><label><strong>Boodschap:</strong></label></h5>
+            <div>
+                @Model.Boodschap
+            </div>
+        </div>
+    </div>
+    
+</div>

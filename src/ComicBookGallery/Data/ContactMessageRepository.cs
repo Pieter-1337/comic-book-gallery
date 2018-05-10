@@ -23,11 +23,14 @@ namespace ComicBookGallery.Data
             }
         };
 
+
+        //Rerturnt alle contact messages
         public List<ContactMessage> getContactMessages()
         {
             return _contactMessages;
         }
 
+        //Returnt een specifieke contact message op id
         public ContactMessage GetContactMessage(int id)
         {
             ContactMessage ContactMessageToReturn = null;
@@ -42,6 +45,19 @@ namespace ComicBookGallery.Data
             }
 
             return ContactMessageToReturn;
+        }
+
+        public void DeleteContactMessage(int id)
+        {
+            //Find the id of the message we want to remove
+            int messageIndex = _contactMessages.FindIndex(e => e.ContactMessageId == id);
+
+            if(messageIndex == -1)
+            {
+                throw new Exception(string.Format("Unable to find a contact message with id {0}", id));
+            }
+
+            _contactMessages.RemoveAt(messageIndex);
         }
     }
 }

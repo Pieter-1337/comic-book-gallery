@@ -31,7 +31,7 @@ namespace ComicBookGallery.Controllers
             return View(contactMessage);
         }
 
-        //Wanneer er een Post van de form wordt uitgevoerd of wanneer de modelstate niet Valid is
+        //Wanneer er een Post van de form (een nieuwe contactmessage wordt verstuurd) wordt uitgevoerd of wanneer de modelstate niet Valid is
         [HttpPost]
         public ActionResult Index(ContactMessage contactMessage)
         {
@@ -55,6 +55,32 @@ namespace ComicBookGallery.Controllers
         {
             var contactMessages = _contactMessageRepository.getContactMessages();
             return View(contactMessages);
+        }
+
+        public ActionResult Detail(int? id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            var contactMessage = _contactMessageRepository.GetContactMessage(id.Value);
+                
+            return View(contactMessage);
+        }
+
+        public ActionResult Delete (int? id)
+        {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            int messageId = Convert.ToInt32(id);
+
+            _contactMessageRepository.DeleteContactMessage(messageId);
+
+            return RedirectToAction("ContactMessages");
+
         }
 
 
