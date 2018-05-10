@@ -137,6 +137,7 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\ContactMessages.cshtml" />
     <Content Include="Views\Contact\Detail.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\IndexTop.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

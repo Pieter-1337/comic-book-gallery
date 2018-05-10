@@ -26,3 +26,9 @@
         border: 1px solid #b81e0d;
         color: lightgrey;
     }
+
+.form-control-text-area{
+    width: 100%;
+    max-width: none;
+    height: 250px !important;
+}
