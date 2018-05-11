@@ -19,27 +19,27 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Comic Book Gallery", "Index", "ComicBooks", new { area = "" }, new { @class = "navbar-brand" })
-                
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-right">
-                    @Html.ActionLink("Products", "Index", "ComicBooks", new { area = "" }, new { @class = "navbar-text"})
-                    @Html.ActionLink("About", "Index", "About", new { area = ""}, new { @class = "navbar-text" })
-                    @Html.ActionLink("Contact", "Index", "Contact", new { area = ""}, new { @class = "navbar-text" })
+                    @Html.ActionLink("Products", "Index", "ComicBooks", new { area = "" }, new { @class = "navbar-text" })
+                    @Html.ActionLink("About", "Index", "About", new { area = "" }, new { @class = "navbar-text" })
+                    @Html.ActionLink("Contact", "Index", "Contact", new { area = "" }, new { @class = "navbar-text" })
                 </ul>
             </div>
         </div>
     </div>
 
     @*@if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
-    {
-        <div class="backbar">
-            <div class="container">
-                @Html.ActionLink("Return to ComicList", "Index", null, new { @class = "btn btn-default" })
-                @*<a class="btn btn-default" href="/">Return to List</a>   <- Bovenstaande action link vervangt de HTML Link tag
+        {
+            <div class="backbar">
+                <div class="container">
+                    @Html.ActionLink("Return to ComicList", "Index", null, new { @class = "btn btn-default" })
+                    @*<a class="btn btn-default" href="/">Return to List</a>   <- Bovenstaande action link vervangt de HTML Link tag
+                </div>
             </div>
-        </div>
-    }*@
+        }*@
 
     <div class="container body-content">
         @RenderBody()
@@ -52,12 +52,18 @@
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    @* Underlying 2 scripts were both obtained with nuget package manager as Jquery validation and Microsoft unobtruvsive jquery validion
+        They are used for client side validation*@
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @* Underlying script makes validation field mark with checkmark or x mark if valid or unvalid! *@
+    <script src="~/Scripts/jquery.bootstrap.validate.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
     @*Onderstaande maakt de datepicker bruikbaar via de datepicker css class  STEEDS SCRIPT EN CSS FILE BIJVOEGEN OOK*@
     <script>
         $('input.datepicker').datepicker({ format: 'm/d/yyyy' });
     </script>
-    
+
 </body>
 </html>

@@ -21,6 +21,7 @@ namespace ComicBookGallery.Controllers
 
         //Wanneer de pagina eerste maal wordt gegenereerd in de sessie
         // GET: Contact
+        
         public ActionResult Index()
         {
             
@@ -35,6 +36,8 @@ namespace ComicBookGallery.Controllers
         [HttpPost]
         public ActionResult Index(ContactMessage contactMessage)
         {
+
+
             
             if (ModelState.IsValid)
             {
