@@ -32,6 +32,7 @@ namespace ComicBookGallery.Models
 
         }
 
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Gelieve een correcte datum in te vullen.")]
         public DateTime Date { get; set; }
 
         public int ContactMessageId { get; set; }
@@ -41,7 +42,7 @@ namespace ComicBookGallery.Models
         public string Naam { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Gelieve het Email veld in te vullen.")]
-        [RegularExpression(@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" + @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$", ErrorMessage = "Gelieve een correct email adres in te vullen")]
+        [EmailAddress(ErrorMessage = "Gelieve een correct email adres in te vullen.")]
         public string Email { get; set; }
 
         public ContactPersoonEnum ContactPersoon { get; set; }

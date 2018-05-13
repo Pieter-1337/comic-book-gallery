@@ -25,71 +25,79 @@
     @* Add if statement to prevent the error summary of showing when the page loads for the first time *@
     if (!ViewData.ModelState.IsValid)
     {
-
+        @Html.ValidationSummary("Volgende zaken werden niet correct ingevuld:", new { @class = "alert alert-danger" })
     }
 
-    @Html.ValidationSummary("Volgende zaken werden niet correct ingevuld:", new { @class = "alert alert-danger" })
 
-    <div class="Row">
 
-        <div class="col-md-6">
-            <div class="form-group">
-                *
-                @Html.LabelFor(m => m.Date, new { @class = "control-label" }):
-                @Html.TextBoxFor(m => m.Date, "{0:d}", new { @class = "form-control", @readonly = "readonly" })
-            </div>
+<div class="Row">
 
-            <div class="form-group">
-                *
-                @Html.LabelFor(m => m.Naam, new { @class = "control-label" }):
-                @Html.TextBoxFor(m => m.Naam, new { @class = "form-control" })
-            </div>
-
-            <div class="form-group">
-                *
-                @Html.LabelFor(m => m.Email, new { @class = "control-label" }):
-                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(m => m.Telefoon, new { @class = "control-label" }):
-                @Html.TextBoxFor(m => m.Telefoon, new { @class = "form-control" })
-            </div>
-
-            <div class="form-group">
-                *
-                @Html.LabelFor(m => m.ContactPersoon, new { @class = "control-label" }):
-                <div>
-                    <label class="radio-inline">
-                        @Html.RadioButtonFor(m => m.ContactPersoon, ContactMessage.ContactPersoonEnum.Particulier) @ContactMessage.ContactPersoonEnum.Particulier
-                    </label>
-
-                    <label class="radio-inline">
-                        @Html.RadioButtonFor(m => m.ContactPersoon, ContactMessage.ContactPersoonEnum.Bedrijf) @ContactMessage.ContactPersoonEnum.Bedrijf
-                    </label>
-                </div>
-            </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            *
+            @Html.LabelFor(m => m.Date, new { @class = "control-label" }):
+            @Html.TextBoxFor(m => m.Date, "{0:d}", new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(m => m.Date, "", new { @class = "alert-danger" })
         </div>
 
-        <div class="col-md-6">
-            <div class="form-group">
-                *
-                @Html.LabelFor(m => m.Boodschap, new { @class = "control-label" }):
-                @Html.TextAreaFor(m => m.Boodschap, new { @class = "form-control form-control-text-area" })
-            </div>
+        <div class="form-group">
+            *
+            @Html.LabelFor(m => m.Naam, new { @class = "control-label" }):
+            @Html.TextBoxFor(m => m.Naam, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Naam, "", new { @class = "alert-danger" })
         </div>
 
-        <div class="col-md-12">
-            <div class="pad-top">
-                <button type="submit" class="btn btn-succes btn-lg margin-right">
-                    <span class="glyphicon glyphicon-save"></span> Save
-                </button>
-                <a href="@Url.Action("Index","ComicBooks","Index")" class="btn btn-warning btn-lg">
-                    <span class="glyphicon glyphicon-remove"></span> Cancel
-                </a>
+        <div class="form-group">
+            *
+            @Html.LabelFor(m => m.Email, new { @class = "control-label" }):
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "alert-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Telefoon, new { @class = "control-label" }):
+            @Html.TextBoxFor(m => m.Telefoon, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            *
+            @Html.LabelFor(m => m.ContactPersoon, new { @class = "control-label" }):
+            <div>
+                <label class="radio-inline">
+                    @Html.RadioButtonFor(m => m.ContactPersoon, ContactMessage.ContactPersoonEnum.Particulier) @ContactMessage.ContactPersoonEnum.Particulier
+                </label>
+
+                <label class="radio-inline">
+                    @Html.RadioButtonFor(m => m.ContactPersoon, ContactMessage.ContactPersoonEnum.Bedrijf) @ContactMessage.ContactPersoonEnum.Bedrijf
+                </label>
             </div>
         </div>
     </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            *
+            @Html.LabelFor(m => m.Boodschap, new { @class = "control-label" }):
+            @Html.TextAreaFor(m => m.Boodschap, new { @class = "form-control form-control-text-area" })
+            @Html.ValidationMessageFor(m => m.Boodschap, "", new { @class = "alert-danger" })
+        </div>
+    </div>
+
+    
+
+    <div class="col-md-12">
+        <br />
+        <br />
+        <div class="pad-top">
+            <button type="submit" class="btn btn-succes btn-lg margin-right">
+                <span class="glyphicon glyphicon-save"></span> Verstuur
+            </button>
+            <a href="@Url.Action("Index","ComicBooks","Index")" class="btn btn-warning btn-lg">
+                <span class="glyphicon glyphicon-remove"></span> Cancel
+            </a>
+        </div>
+    </div>
+</div>
     <div class="clearfix"></div>
 }
 

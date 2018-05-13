@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using ComicBookGallery.Data;
 using ComicBookGallery.Models;
+using System.Threading;
 
 namespace ComicBookGallery.Controllers
 {
@@ -36,8 +37,6 @@ namespace ComicBookGallery.Controllers
         [HttpPost]
         public ActionResult Index(ContactMessage contactMessage)
         {
-
-
             
             if (ModelState.IsValid)
             {
